@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>口语练习 - AI智能发音评测</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header-section">
+      <h1 class="app-title">口语练习</h1>
+      <p class="app-subtitle">AI智能发音评测</p>
+    </header>
+
+    <main class="main-card">
+      <section class="word-section">
+        <div class="pronunciation-tag">Standard Pronunciation</div>
+        <div class="word-display" id="word">thought</div>
+        <div class="phonetic-section">
+          <div class="phonetic-text" id="phonetic">/θɔːt/</div>
+          <div class="play-button" onclick="playStandardAudio()">
+            <span class="play-icon">🔊</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="interaction-area">
+        <div class="record-section">
+          <button class="record-button" id="recordBtn">
+            <span class="mic-icon">🎤</span>
+          </button>
+          <p class="record-hint" id="hintText">按住录音</p>
+        </div>
+
+        <div class="score-section">
+          <div class="score-circle">
+            <canvas id="scoreCanvas" width="120" height="120"></canvas>
+            <div class="score-display" id="scoreText">--</div>
+          </div>
+          <div class="score-label">发音分数</div>
+        </div>
+      </section>
+
+      <section class="status-section">
+        <div class="status-message" id="statusMessage">准备录音...</div>
+      </section>
+
+      <section class="feedback-section" id="feedbackContainer" style="display: none;">
+        <div class="feedback-title"><span class="feedback-icon">💡</span>发音建议</div>
+        <div id="feedbackItems"></div>
+      </section>
+
+      <section class="action-buttons">
+        <button class="primary-button" id="resetBtn">换一个词练习</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
